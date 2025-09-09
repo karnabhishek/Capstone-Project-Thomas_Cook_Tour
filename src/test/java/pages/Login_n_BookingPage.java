@@ -3,47 +3,41 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
-
 import java.time.Duration;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-
-
-
-
 public class Login_n_BookingPage {
-
+	
     WebDriver driver;
     Actions actions;
 
-    // ====== Locators ======
-    By loginDropdown = By.id("LoginLogoutToggel"); // update locator
-    By loginButton = By.id("mainLogIn");        // update locator
-    By emailInput = By.id("loginId");            // update locator
-    By getOtpButton = By.id("sendOTP");      // update locator
-    By finalLoginBtn = By.id("loginButton");    // update locator
+    By loginDropdown = By.id("LoginLogoutToggel"); 
+    By loginButton = By.id("mainLogIn");        
+    By emailInput = By.id("loginId");         
+    By getOtpButton = By.id("sendOTP");      
+    By finalLoginBtn = By.id("loginButton"); 
 
-    By holidaysMenu = By.xpath("//*[@id='navbarDropdown']");   // update locator
+    By holidaysMenu = By.xpath("//*[@id='navbarDropdown']");   
     By australiaTour = By.linkText("Australia Tour Packages");
     By packageLink = By.partialLinkText("Amazing Australia - Winter");
-    By travelDate = By.id("tavelDate");       // update locator
+    By travelDate = By.id("tavelDate");       
     By calculatePriceBtn = By.partialLinkText("Package");
 
     By continueBtn = By.linkText("Continue"); 
-    By nxtcontinueBtn = By.id("pre-continueBtn");// update locator
+    By nxtcontinueBtn = By.id("pre-continueBtn");
     By nxtnxtcontinueBtn = By.linkText("Continue");
-    By traveller1FirstName = By.id("room1_adultFName1"); // update locator
-    By traveller1LastName = By.id("room1_adultLName1");   // update locator
+    By traveller1FirstName = By.id("room1_adultFName1"); 
+    By traveller1LastName = By.id("room1_adultLName1");   
     By traveller1DOB = By.id("room1_adultDOB1");
     By traveller1passportNo = By.id("room1_adultPassportNo1");
-    By traveller1passportexpiry = By.id("room1_adultPassportExpiry1");  // update locator
+    By traveller1passportexpiry = By.id("room1_adultPassportExpiry1");  
     
-    By traveller2FirstName = By.id("room1_adultFName2"); // update locator
-    By traveller2LastName = By.id("room1_adultLName2");   // update locator
+    By traveller2FirstName = By.id("room1_adultFName2"); 
+    By traveller2LastName = By.id("room1_adultLName2");  
     By traveller2DOB = By.id("room1_adultDOB2");
     By traveller2passportNo = By.id("room1_adultPassportNo2");
-    By traveller2passportexpiry = By.id("room1_adultPassportExpiry2");  // update locator
+    By traveller2passportexpiry = By.id("room1_adultPassportExpiry2");  
     
     By addressFirstName = By.id("fName-address");
     By addressLastName = By.id("lName-address");
@@ -63,7 +57,7 @@ public class Login_n_BookingPage {
         actions = new Actions(driver);
     }
 
-    // ====== Methods ======
+    
     public void clickLoginDropdown() {
         driver.findElement(loginDropdown).click();
     }
